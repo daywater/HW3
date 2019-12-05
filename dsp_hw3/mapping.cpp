@@ -18,14 +18,14 @@ int main(int argc,char **argv){
 
         while (getline(infile,line)){
           vector<string> tmp;
-          string w,c="","";
+          string w="",c="";
 
-          wd.push_back(line[0]);
-          wd.push_back(line[1]);
-          tmp.push_back(wd);
+          w.push_back(line[0]);
+          w.push_back(line[1]);
+          tmp.push_back(w);
 
           int i = -1;
-          while(iline.begin()+i < iline.end()){
+          while(line.begin()+i < line.end()){
             i++;
       			if(line[i]=='/' || line[i]==' '){
       				c = line.substr(i+1,i+3);
