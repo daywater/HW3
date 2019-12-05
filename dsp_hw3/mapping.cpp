@@ -43,16 +43,16 @@ int main(int argc,char **argv){
         }
         char enter[1];
         enter[0] = '\n';
-        ofstream out_path(fout);
+        ofstream outfile(out_path);
         for(const auto &i : zb_map){
-          out_path << i.first <<'\t';
+          outfile << i.first <<'\t';
           for(string j : i.second)
-            out_path << j << ' ';
-          long pos = out_path.tellp();
-            out_path.seekp(pos - 1);
-          out_path.write(enter,1);
+            outfile << j << ' ';
+          long pos = outfile.tellp();
+            outfile.seekp(pos - 1);
+          outfile.write(enter,1);
         }
-        out_path.close();
+        outfile.close();
 
 
         cout<<in_path<<endl;
