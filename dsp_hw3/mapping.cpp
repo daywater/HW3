@@ -28,7 +28,7 @@ int main(int argc,char **argv){
           while(line.begin()+i < line.end()){
             i++;
       			if(line[i]=='/' || line[i]==' '){
-      				c = line.substr(i+1,i+3);
+      				c = line.substr(i+1,2);
       				bool NotExist = (zb_map.find(c)== zb_map.end());
       				if(NotExist) zb_map[c] = tmp;
       				else{
