@@ -14,8 +14,11 @@ int main(int argc,char **argv){
         unordered_map<string,vector<string>> zb_map;
 
         cout<<in<<endl;
-        cout<<out<<endl;
+        
 
+
+	cout<<out<<endl;
+	
         return 0;
 
 }
