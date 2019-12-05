@@ -26,6 +26,7 @@ all: $(TARGET)
 
 map:
 	@#TODO
+	@$(CXX) --std=c++11 -o mapping mapping.cpp
 	@#python3 mapping.py $(FROM) $(TO)
 
 clean:
