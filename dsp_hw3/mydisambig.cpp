@@ -6,7 +6,7 @@
 #include <string>
 #include <unordered_map>
 #include <cstdlib>
-#include <~/srilm-1.5.10/include>
+#include <~/srilm-1.5.10/include/Ngram.h>
 
 
 int main(int argc, char** argv){
