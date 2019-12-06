@@ -11,6 +11,11 @@
 
 using namespace std;
 
+struct Node { //(prob,prev)
+    double prob;
+    string prev;
+};
+
 int main(int argc, char** argv){
   /*
   char *seg_path=argv[1];
