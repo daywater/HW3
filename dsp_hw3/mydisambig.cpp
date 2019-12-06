@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <cstdlib>
 #include <Ngram.h>
+#include <limits>
 
 
 int main(int argc, char** argv){
@@ -87,6 +88,7 @@ int main(int argc, char** argv){
   ifstream TXT(text_path);
   vector<string> work;
   vector<string> line_out;
+  vector<string> ww;
   unordered_map<string, Node> Ns;
   vector<unordered_map<string, Node>> Viter;
   vector<string> candi;
@@ -96,10 +98,10 @@ int main(int argc, char** argv){
     line_out.push_back("<s>");
     for(int i = 0; i < tmp.size(); ++i ){
       if(tmp[i]!=' ')
-        tmpS.push_back(tmp[i]);
-      if(tmp[i]==' '&&!tmpS.empty()){
-        line_out.push_back(tmpS);
-        tmpS.clear();
+        ww.push_back(tmp[i]);
+      if(tmp[i]==' '&&!ww.empty()){
+        line_out.push_back(ww);
+        ww.clear();
       }
     }
     line_out.push_back("</s>");
