@@ -198,6 +198,7 @@ int main(int argc, char** argv){
     line_out.pop_back();
     for(int i = 0; i < (line_out.size()-1) ; ++i)
       cout << line_out[i] << ' ';
+      cout<<"hehe";
     cout << line_out[line_out.size()-1] << '\n';
     line_out.clear();
   }
