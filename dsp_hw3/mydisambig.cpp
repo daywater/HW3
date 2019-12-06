@@ -94,7 +94,7 @@ int main(int argc, char** argv){
   ifstream TXT(text_path);
   vector<string> work;
   vector<string> line_out;
-  vector<string> ww;
+  string ww;
   unordered_map<string, Node> Ns;
   vector<unordered_map<string, Node>> Viter;
   vector<string> candi;
