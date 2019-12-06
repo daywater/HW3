@@ -40,6 +40,7 @@ int main(int argc, char** argv){
   char* map_path=argv[1];
   char* text_path=argv[2];
   char* model_path=argv[3];
+  char* out_path=argv[4];
   int order = 2;
 
 
@@ -90,7 +91,7 @@ int main(int argc, char** argv){
   }
   ZYBMF.close();
 
-
+  ofstream OUT(out_path);
   ifstream TXT(text_path);
   vector<string> work;
   vector<string> line_out;
@@ -197,9 +198,9 @@ int main(int argc, char** argv){
     }
     line_out.pop_back();
     for(int i = 0; i < (line_out.size()-1) ; ++i)
-      cout << line_out[i] << ' ';
-      cout<<"hehe";
-    cout << line_out[line_out.size()-1] << '\n';
+      OUT << line_out[i] << ' ';
+
+    OUT << line_out[line_out.size()-1] << '\n';
     line_out.clear();
   }
 
